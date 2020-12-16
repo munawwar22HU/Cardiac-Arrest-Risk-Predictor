@@ -24,9 +24,10 @@ import seaborn as sns
 # %matplotlib inline
  
 import random
+#random.seed(0)
 from pprint import pprint
 
-df = pd.read_csv("Data/HeartData.csv")
+
 
 
 """
@@ -293,6 +294,7 @@ def evaluate(df,tree):
   print("Accuracy : ",accuracy)
   print("Recall Score Classwise : " ,recall)
   print("Precision : ",precision)
+  return accuracy,precision,recall
 
 # random.seed(0)
 # train_df,test_df = train_test_split(df,test_size=0.3)
